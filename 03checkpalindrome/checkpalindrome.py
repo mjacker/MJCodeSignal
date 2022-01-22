@@ -8,7 +8,22 @@ def solution(inputString):
     else:
         return False
 
-if solution(input("Enter a word, I will check if it is palindrome: ")):
-    print("This word is palindrome.")
+def solution2(inputString):
+    return inputString == inputString[::-1]
+
+
+# Main program
+print("### CHECK IF IT IS A PALINDROME ###")
+userInput = input("Enter a word: ")
+
+print("Solution one: ")
+if solution(userInput):
+    print("\tThis word is palindrome.")
 else:
-    print("This word is not palindrome")
+    print("\tThis word is not palindrome")
+
+print("Solution two: ")
+if solution2(userInput):
+    print("\tThis word is palindrome.")
+else:
+    print("\tThis word is not palindrome. ")
